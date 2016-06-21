@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="articleModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="articleEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="user" EntityType="articleModel.user" />
+    <EntitySet Name="Article" EntityType="articleModel.Article" />
+    <EntitySet Name="comment" EntityType="articleModel.comment" />
+    <EntitySet Name="image" EntityType="articleModel.image" />
+  </EntityContainer>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="id" Type="Int64" />
+    <Property Name="userid" Type="String" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="userpassword" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="moni" Type="Double" />
+    <Property Name="mailbox" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="currexp" Type="Int64" />
+    <Property Name="level" Type="Int64" />
+    <Property Name="follows" Type="Int64" />
+    <Property Name="lastlogindate" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="stows" Type="Int64" />
+    <Property Name="comments" Type="Int64" />
+    <Property Name="gender" Type="Int64" />
+    <Property Name="sign" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="avatar" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="posts" Type="Int64" />
+    <Property Name="followed" Type="Int64" />
+    <Property Name="lastloginip" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="fans" Type="Int64" />
+    <Property Name="regTime" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="nextlevelneed" Type="Int64" />
+    <Property Name="comefrom" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="dtime" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="exppercent" Type="Int64" />
+    <Property Name="isfriend" Type="Int64" />
+    <Property Name="views" Type="Int64" />
+    <Property Name="localavatar" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="contentId" />
+    </Key>
+    <Property Type="String" Name="user" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="txt" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="description" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="contentId" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isArticle" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="channelId" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="releaseDate" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="title" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isRecommend" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="views" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="comments" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="stows" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="toplevel" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cover" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="viewOnly" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Type="String" Name="cid" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="quoteId" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="content" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="postDate" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="userID" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="userName" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="userImg" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="count" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="deep" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="refCount" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ups" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="downs" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="image">
+    <Key>
+      <PropertyRef Name="imagename" />
+    </Key>
+    <Property Type="String" Name="imagename" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="contentid" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="imagetype" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

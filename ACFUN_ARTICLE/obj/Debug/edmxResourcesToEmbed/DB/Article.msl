@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="articleModelStoreContainer" CdmEntityContainer="articleEntities1">
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="articleModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userpassword" ColumnName="userpassword" />
+          <ScalarProperty Name="moni" ColumnName="moni" />
+          <ScalarProperty Name="mailbox" ColumnName="mailbox" />
+          <ScalarProperty Name="currexp" ColumnName="currexp" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="follows" ColumnName="follows" />
+          <ScalarProperty Name="lastlogindate" ColumnName="lastlogindate" />
+          <ScalarProperty Name="stows" ColumnName="stows" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="sign" ColumnName="sign" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="posts" ColumnName="posts" />
+          <ScalarProperty Name="followed" ColumnName="followed" />
+          <ScalarProperty Name="lastloginip" ColumnName="lastloginip" />
+          <ScalarProperty Name="fans" ColumnName="fans" />
+          <ScalarProperty Name="regTime" ColumnName="regTime" />
+          <ScalarProperty Name="nextlevelneed" ColumnName="nextlevelneed" />
+          <ScalarProperty Name="comefrom" ColumnName="comefrom" />
+          <ScalarProperty Name="dtime" ColumnName="dtime" />
+          <ScalarProperty Name="exppercent" ColumnName="exppercent" />
+          <ScalarProperty Name="isfriend" ColumnName="isfriend" />
+          <ScalarProperty Name="views" ColumnName="views" />
+          <ScalarProperty Name="localavatar" ColumnName="localavatar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Article">
+      <EntityTypeMapping TypeName="articleModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="viewOnly" ColumnName="viewOnly" />
+          <ScalarProperty Name="cover" ColumnName="cover" />
+          <ScalarProperty Name="toplevel" ColumnName="toplevel" />
+          <ScalarProperty Name="stows" ColumnName="stows" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="views" ColumnName="views" />
+          <ScalarProperty Name="isRecommend" ColumnName="isRecommend" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="releaseDate" ColumnName="releaseDate" />
+          <ScalarProperty Name="channelId" ColumnName="channelId" />
+          <ScalarProperty Name="isArticle" ColumnName="isArticle" />
+          <ScalarProperty Name="contentId" ColumnName="contentId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="txt" ColumnName="txt" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comment">
+      <EntityTypeMapping TypeName="articleModel.comment">
+        <MappingFragment StoreEntitySet="comment">
+          <ScalarProperty Name="downs" ColumnName="downs" />
+          <ScalarProperty Name="ups" ColumnName="ups" />
+          <ScalarProperty Name="refCount" ColumnName="refCount" />
+          <ScalarProperty Name="deep" ColumnName="deep" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="userImg" ColumnName="userImg" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="postDate" ColumnName="postDate" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="quoteId" ColumnName="quoteId" />
+          <ScalarProperty Name="cid" ColumnName="cid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="image">
+      <EntityTypeMapping TypeName="articleModel.image">
+        <MappingFragment StoreEntitySet="image">
+          <ScalarProperty Name="imagetype" ColumnName="imagetype" />
+          <ScalarProperty Name="contentid" ColumnName="contentid" />
+          <ScalarProperty Name="imagename" ColumnName="imagename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="articleModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="articleModelStoreContainer">
+    <EntitySet Name="Article" EntityType="articleModel.Store.Article" store:Type="Tables" />
+    <EntitySet Name="comment" EntityType="articleModel.Store.comment" store:Type="Tables" />
+    <EntitySet Name="image" EntityType="articleModel.Store.image" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="articleModel.Store.user" store:Type="Tables" store:Name="user">
+      <DefiningQuery>SELECT 
+      [user].[id] AS [id], 
+      [user].[userid] AS [userid], 
+      [user].[username] AS [username], 
+      [user].[userpassword] AS [userpassword], 
+      [user].[moni] AS [moni], 
+      [user].[mailbox] AS [mailbox], 
+      [user].[currexp] AS [currexp], 
+      [user].[level] AS [level], 
+      [user].[follows] AS [follows], 
+      [user].[lastlogindate] AS [lastlogindate], 
+      [user].[stows] AS [stows], 
+      [user].[comments] AS [comments], 
+      [user].[gender] AS [gender], 
+      [user].[sign] AS [sign], 
+      [user].[avatar] AS [avatar], 
+      [user].[posts] AS [posts], 
+      [user].[followed] AS [followed], 
+      [user].[lastloginip] AS [lastloginip], 
+      [user].[fans] AS [fans], 
+      [user].[regTime] AS [regTime], 
+      [user].[nextlevelneed] AS [nextlevelneed], 
+      [user].[comefrom] AS [comefrom], 
+      [user].[dtime] AS [dtime], 
+      [user].[exppercent] AS [exppercent], 
+      [user].[isfriend] AS [isfriend], 
+      [user].[views] AS [views], 
+      [user].[localavatar] AS [localavatar]
+      FROM [user] AS [user]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="contentId" />
+    </Key>
+    <Property Name="user" Type="nvarchar" />
+    <Property Name="txt" Type="nvarchar" />
+    <Property Name="description" Type="nvarchar" />
+    <Property Name="contentId" Type="nvarchar" Nullable="false" />
+    <Property Name="isArticle" Type="nvarchar" />
+    <Property Name="channelId" Type="nvarchar" />
+    <Property Name="releaseDate" Type="nvarchar" />
+    <Property Name="title" Type="nvarchar" />
+    <Property Name="isRecommend" Type="nvarchar" />
+    <Property Name="views" Type="nvarchar" />
+    <Property Name="comments" Type="nvarchar" />
+    <Property Name="stows" Type="nvarchar" />
+    <Property Name="toplevel" Type="nvarchar" />
+    <Property Name="cover" Type="nvarchar" />
+    <Property Name="viewOnly" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="nvarchar" Nullable="false" />
+    <Property Name="quoteId" Type="nvarchar" />
+    <Property Name="content" Type="nvarchar" />
+    <Property Name="postDate" Type="nvarchar" />
+    <Property Name="userID" Type="nvarchar" />
+    <Property Name="userName" Type="nvarchar" />
+    <Property Name="userImg" Type="nvarchar" />
+    <Property Name="count" Type="nvarchar" />
+    <Property Name="deep" Type="nvarchar" />
+    <Property Name="refCount" Type="nvarchar" />
+    <Property Name="ups" Type="nvarchar" />
+    <Property Name="downs" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="image">
+    <Key>
+      <PropertyRef Name="imagename" />
+    </Key>
+    <Property Name="imagename" Type="nvarchar" Nullable="false" />
+    <Property Name="contentid" Type="nvarchar" />
+    <Property Name="imagetype" Type="nvarchar" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“main.user”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="id" Type="integer" />
+    <Property Name="userid" Type="integer" Nullable="false" />
+    <Property Name="username" Type="nvarchar" />
+    <Property Name="userpassword" Type="nvarchar" />
+    <Property Name="moni" Type="float" />
+    <Property Name="mailbox" Type="nvarchar" />
+    <Property Name="currexp" Type="integer" />
+    <Property Name="level" Type="integer" />
+    <Property Name="follows" Type="integer" />
+    <Property Name="lastlogindate" Type="nvarchar" />
+    <Property Name="stows" Type="integer" />
+    <Property Name="comments" Type="integer" />
+    <Property Name="gender" Type="integer" />
+    <Property Name="sign" Type="nvarchar" />
+    <Property Name="avatar" Type="nvarchar" />
+    <Property Name="posts" Type="integer" />
+    <Property Name="followed" Type="integer" />
+    <Property Name="lastloginip" Type="nvarchar" />
+    <Property Name="fans" Type="integer" />
+    <Property Name="regTime" Type="nvarchar" />
+    <Property Name="nextlevelneed" Type="integer" />
+    <Property Name="comefrom" Type="nvarchar" />
+    <Property Name="dtime" Type="nvarchar" />
+    <Property Name="exppercent" Type="integer" />
+    <Property Name="isfriend" Type="integer" />
+    <Property Name="views" Type="integer" />
+    <Property Name="localavatar" Type="nvarchar" />
+  </EntityType>
+</Schema>
